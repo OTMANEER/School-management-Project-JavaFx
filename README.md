@@ -40,7 +40,7 @@ in this project i tried to give two seperated interfaces for the same applicatio
   3. Make sure that you use Java8 (1.8.xxx)
   4. for better experience try to install the database and Run the following command to see the stored Users with the password  
    
-   ==> use quiz_app_db; <br> </br>
+      >use quiz_app_db; <br> </br>
       >show tables; <br> </br>
       >select * from user_professeur; <br> </br>
       >select * from user_students; <br> </br>
