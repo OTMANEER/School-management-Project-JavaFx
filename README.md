@@ -1,6 +1,8 @@
 # School-management-Project-JavaFx
 
 This is a pure JavaFx project that handle QCM Tests for Students and Statistics for Professors
+  
+  ![GitHub Logo](/images/1.png) <br></br>
 
 
 in this project i tried to give two seperated interfaces for the same application using Java and JavaFx for better user interface experience.
@@ -11,11 +13,8 @@ in this project i tried to give two seperated interfaces for the same applicatio
   * When A student finish the test he has the choice to return back or continu in order to see the result that will be stored automaticaly in the database.
   * I tried to give  more enthusiastic experience by adding a Video part where the student can hear and answer (the video could be aploaded by the professor)
   * More Animations are added  using Css for better UX.
-  
-  ![GitHub Logo](/images/1.png) <br></br>
-    ![GitHub Logo](/images/2.png)  <br></br>
-      ![GitHub Logo](/images/3.png)  <br></br>
-        ![GitHub Logo](/images/4.png)  <br></br>
+
+
           ![GitHub Logo](/images/5.png)  <br></br>
            ![GitHub Logo](/images/6.png)  <br></br>
             ![GitHub Logo](/images/7.png)  <br></br>
@@ -31,6 +30,9 @@ in this project i tried to give two seperated interfaces for the same applicatio
   * The professor Can apload a video from his own Server (Computer usb ...) this video would be  copied in a specific location and stored in a table with the     
     index of last video +1.
   * More to discover ..
+      ![GitHub Logo](/images/2.png)  <br></br>
+      ![GitHub Logo](/images/3.png)  <br></br>
+        ![GitHub Logo](/images/4.png)  <br></br>
   
   
   # Usage 
