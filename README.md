@@ -13,8 +13,6 @@ in this project i tried to give two seperated interfaces for the same applicatio
   * When A student finish the test he has the choice to return back or continu in order to see the result that will be stored automaticaly in the database.
   * I tried to give  more enthusiastic experience by adding a Video part where the student can hear and answer (the video could be aploaded by the professor)
   * More Animations are added  using Css for better UX.
-
-
           ![GitHub Logo](/images/5.png)  <br></br>
            ![GitHub Logo](/images/6.png)  <br></br>
             ![GitHub Logo](/images/7.png)  <br></br>
