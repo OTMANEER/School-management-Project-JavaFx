@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otmane.app.controlleurs.JavaQuizController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/home.css" VBox.vgrow="ALWAYS">
+         <children>
+            <StackPane fx:id="root" alignment="TOP_CENTER" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFF;" stylesheets="@../css/content.css">
+               <children>
+                  <AnchorPane fx:id="testPane" prefHeight="610.0" prefWidth="900.0" styleClass="mainFxmlClass" visible="false" StackPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btnInfos" buttonType="RAISED" layoutX="820.0" layoutY="20.0" onAction="#btnInfosProfs" stylesheets="@../css/content.css" text="Infos">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="ENVELOPE" size="14" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox alignment="TOP_CENTER" layoutX="11.0" layoutY="23.0" prefHeight="600.0" prefWidth="790.0" spacing="10.0" stylesheets="@../css/home.css">
+                           <children>
+                              <Label fx:id="titleLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="600.0" styleClass="title" stylesheets="@../css/content.css" text="basic Test" />
+                              <Label prefHeight="44.0" prefWidth="747.0" styleClass="title2" text="Question: " />
+                              <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="214.0" prefWidth="790.0">
+                                 <content>
+                                    <TextArea fx:id="questionLbl" editable="false" prefHeight="207.0" prefWidth="788.0" style="-fx-border-color: #3b5875; -fx-font-size: 18px; -fx-font-family: &quot;Roboto Light&quot;; -fx-font-style: Italic;" wrapText="true" />
+                                 </content>
+                              </ScrollPane>
+                              <Label prefHeight="44.0" prefWidth="752.0" styleClass="title2" text="Options:" />
+                              <VBox maxWidth="-Infinity" prefHeight="152.0" prefWidth="725.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXRadioButton fx:id="reponse1" onAction="#radioClicked" prefHeight="23.0" prefWidth="105.0" style="-fx-text-fill: #404040; -fx-font-size: 16; -fx-font-family: &quot;Roboto Light&quot;; -fx-font-style: Italic;" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" ">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="reponse2" onAction="#radioClicked" style="-fx-text-fill: #404040; -fx-font-size: 16; -fx-font-family: &quot;Roboto Light&quot;; -fx-font-style: Italic;" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" " />
+                                    <JFXRadioButton fx:id="reponse3" onAction="#radioClicked" style="-fx-text-fill: #404040; -fx-font-size: 16; -fx-font-family: &quot;Roboto Light&quot;; -fx-font-style: Italic;" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" " />
+                                    <JFXRadioButton fx:id="reponse4" onAction="#radioClicked" style="-fx-text-fill: #404040; -fx-font-size: 16; -fx-font-family: &quot;Roboto Light&quot;; -fx-font-style: Italic;" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" " />
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="70.0" prefWidth="680.0" spacing="50.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" onAction="#btnPrevious" prefHeight="47.0" prefWidth="151.0" style="-fx-font-size: 16;" text="précédent" textFill="#050537" HBox.hgrow="ALWAYS">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/previous.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#btnNext" prefHeight="40.0" prefWidth="132.0" style="-fx-font-size: 16;" text="suivant" textFill="#050537">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/next.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="76.0" />
+                           </padding>
+                        </VBox>
+                        <JFXButton buttonType="RAISED" layoutY="20.0" onAction="#btnBackHome" styleClass="btnBackHomeUnique" text="Acceuil">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#btnBackHome" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logOut.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="78.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXSlider fx:id="progress" blockIncrement="0.0" layoutY="630.0" max="4.0" prefWidth="900.0" />
+                     </children>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </AnchorPane>
+                  <AnchorPane fx:id="resultPane" prefHeight="610.0" prefWidth="780.0" stylesheets="@../css/content.css" visible="false" StackPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="136.0" layoutY="90.0" prefHeight="448.0" prefWidth="550.0" spacing="20.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label styleClass="title" text="Résultat" />
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="257.0" prefWidth="318.0" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="scoreLbl" style="-fx-font-size: 45;" />
+                                    <Label fx:id="precentageScoreLbl" style="-fx-font-size: 45; -fx-text-fill: #6f0000;" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="75.0" prefWidth="549.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton onAction="#btnBackHome" styleClass="btn-finished" text="revenir à la page d'accueil" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="homePane" prefHeight="650.0" prefWidth="900.0" stylesheets="@../css/home.css">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="900.0" spacing="40.0" style="-fx-text-fill: linear-gradient(from 13px 200px to 400px  200px, #404040, #000000 100%);">
+                           <children>
+                              <Label style="-fx-text-fill: linear-gradient(from 13px 200px to 400px  200px, #404040, #000000 100%);" styleClass="Home_title" text="Les Tests Qcm">
+                                 <padding>
+                                    <Insets top="15.0" />
+                                 </padding></Label>
+                              <VBox alignment="TOP_CENTER" prefHeight="550.0" prefWidth="140.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnBasic" styleClass="btn-choose" stylesheets="@../css/home.css" text="Test 1" VBox.vgrow="ALWAYS" />
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnOperator" styleClass="btn-choose" stylesheets="@../css/home.css" text="Test 2" VBox.vgrow="ALWAYS" />
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnTables" styleClass="btn-choose" stylesheets="@../css/home.css" text="Test 3" VBox.vgrow="ALWAYS" />
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnOOP" styleClass="btn-choose" stylesheets="@../css/home.css" text="Test 4" VBox.vgrow="ALWAYS" />
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnPoly" styleClass="btn-choose" stylesheets="@../css/home.css" text="Test 5" VBox.vgrow="ALWAYS" />
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnException" styleClass="btn-choose" stylesheets="@../css/home.css" text="Test 6" VBox.vgrow="ALWAYS" />
+                                    <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#btnAdvanced" styleClass="btn-choose" stylesheets="@../css/home.css" text="Videos" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets top="30.0" />
+                           </padding>
+                        </VBox>
+                        <Circle fx:id="myCircle" centerX="81.0" centerY="150.0" fill="WHITE" layoutX="20.0" radius="67.0" stroke="#b5b5b5" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" />
+                        <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/check.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imageView2" fitHeight="150.0" fitWidth="170.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/video.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imageView3" fitHeight="150.0" fitWidth="180.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/undraw_all_the_data_h4ki.png" />
+                           </image>
+                        </ImageView>
+                        <Circle fx:id="myCircle1" centerX="81.0" centerY="350.0" fill="WHITE" layoutX="20.0" radius="55.0" stroke="#b5b5b5" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" />
+                        <Circle fx:id="myCircle2" centerX="81.0" centerY="540.0" fill="WHITE" layoutX="20.0" radius="46.0" stroke="#b5b5b5" strokeType="INSIDE" strokeWidth="0.0" styleClass="circle" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="finishedPane" prefHeight="610.0" prefWidth="780.0" stylesheets="@../css/content.css" visible="false" StackPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="136.0" layoutY="90.0" prefHeight="448.0" prefWidth="550.0" spacing="80.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Label styleClass="title" text="Le test est Terminé" />
+                                 </children>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton onAction="#btnViewResult" styleClass="btn-finished" text="Voir Résultat" />
+                                    <JFXButton onAction="#btnBackTest" styleClass="btn-finished" text="Revenir au Test" />
+                                    <JFXButton onAction="#btnBackHome" styleClass="btn-finished" text=" Revenir à la page d'accueil" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="videoPane" prefHeight="670.0" prefWidth="900.0" stylesheets="@../css/content.css" visible="false" StackPane.alignment="TOP_CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="645.0" prefWidth="900.0" spacing="2.0">
+                           <children>
+                              <Label fx:id="titleLbl1" alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="600.0" styleClass="title" stylesheets="@../css/content.css" text="Video">
+                                 <VBox.margin>
+                                    <Insets left="40.0" top="5.0" />
+                                 </VBox.margin></Label>
+                              <Label prefHeight="35.0" prefWidth="747.0" styleClass="title2" text="Ecoutez Bien:">
+                                 <VBox.margin>
+                                    <Insets bottom="6.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding></Label>
+                              <AnchorPane prefHeight="310.0" prefWidth="650.0">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="300.0" prefWidth="650.0">
+                                       <children>
+                                          <MediaView fx:id="mediaView" fitHeight="280.0" fitWidth="600.0" styleClass="mediaView">
+                                                  <viewport>
+                                                     <Rectangle2D />
+                                                  </viewport>
+                                             <VBox.margin>
+                                                <Insets bottom="6.0" />
+                                             </VBox.margin>
+                                          </MediaView>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <JFXButton contentDisplay="GRAPHIC_ONLY" onMouseClicked="#play" ripplerFill="#0000c7">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fx:id="icon" glyphName="PLAY" size="9" />
+                                                   </graphic>
+                                                </JFXButton>
+                                                <JFXSlider fx:id="slider" prefWidth="290.0" />
+                                                <Label fx:id="playTime" prefWidth="80.0" text="Label" />
+                                                <JFXSlider fx:id="volumeSlider" prefWidth="80.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="2.0" top="5.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="70.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <Label prefHeight="30.0" prefWidth="752.0" styleClass="title2" text="Options:">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin></Label>
+                              <VBox maxWidth="-Infinity" prefHeight="150.0" prefWidth="650.0" spacing="15.0">
+                                 <children>
+                                    <JFXRadioButton fx:id="reponse11" onAction="#radioClicked" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" ">
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="reponse21" onAction="#radioClicked" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" ">
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin></JFXRadioButton>
+                                    <JFXRadioButton fx:id="reponse31" onAction="#radioClicked" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" ">
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin></JFXRadioButton>
+                                    <JFXRadioButton fx:id="reponse41" onAction="#radioClicked" styleClass="btn-reponse" stylesheets="@../css/content.css" text=" ">
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin></JFXRadioButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="650.0" spacing="70.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" onAction="#btnPrevious" prefHeight="47.0" prefWidth="157.0" ripplerFill="BLACK" styleClass="btn" text="previews">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/previous.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#btnNext" prefHeight="40.0" prefWidth="132.0" ripplerFill="BLACK" styleClass="btn" text="Suivant">
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/next.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="125.0" right="125.0" />
+                           </padding>
+                        </VBox>
+                        <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#btnBackHome" styleClass="btnBackHomeUnique" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#btnBackHome" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logOut.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="76.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

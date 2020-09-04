@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="1102.0" spacing="5.0" stylesheets="@../css/AjouterEtudiant.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otmane.app.controlleurs.AjouterQuestionController">
+    <children>
+        <Pane prefHeight="143.0" prefWidth="1102.0" style="-fx-background-color: linear-gradient(from 0px 200px to 900px  200px,#3f2b96 ,#a8c0ff 100%);">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <children>
+                <Label layoutX="50.0" layoutY="30.0" text="Ajouter Questions" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="120.0" layoutY="93.0" text="informations-questions-Qcm" textFill="WHITE">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#addText" prefWidth="200.0" style="-fx-background-color: b1aac8;" text="Question Textuelle">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#addVideo" prefWidth="200.0" style="-fx-background-color: b1aac8;" text="Video">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+        <VBox alignment="CENTER" fillWidth="false" prefHeight="470.0" prefWidth="850.0" spacing="5.0" VBox.vgrow="ALWAYS">
+            <children>
+            <JFXScrollPane alignment="TOP_LEFT" prefHeight="300.0" prefWidth="800.0" style="-fx-background-color: #DDD;">
+               <children>
+                  <TextArea fx:id="questionField" prefHeight="200.0" prefWidth="200.0" promptText="Saisir La Question" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <AnchorPane fx:id="videoField" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f4f4f4;" visible="false">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                           <children>
+                              <HBox fx:id="videoChooserPane" alignment="CENTER" prefHeight="80.0" prefWidth="800.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton fx:id="chooseMyVideobtn" buttonType="RAISED" onAction="#chooseMyvideo" style="-fx-background-color: b1aac8; -fx-border-radius: 5px;" text="Choisir La video">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <Label fx:id="videoExtention">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0">
+                           <children>
+                              <Label text="Choisir Votre video">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </JFXScrollPane>
+            <TextField fx:id="reponse1Field" prefHeight="40.0" prefWidth="500.0" promptText="réponse 1">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="reponse2Field" prefHeight="40.0" prefWidth="500.0" promptText="réponse 2">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="reponse3Field" prefHeight="40.0" prefWidth="500.0" promptText="réponse 3">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="reponse4Field" prefHeight="40.0" prefWidth="500.0" promptText="réponse 4">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="solutionField" prefHeight="40.0" prefWidth="500.0" promptText="Solution écrite">
+               <VBox.margin>
+                  <Insets left="90.0" right="90.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <JFXComboBox fx:id="testIdField" labelFloat="true" promptText="Qcm N°" />
+               </children>
+            </HBox>
+            <Label fx:id="lbrErrors" />
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" spacing="40.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <JFXButton onAction="#AjouterQuestion" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #08d148;" styleClass="btn" text="Ajouter" />
+                        <JFXButton onAction="#SupprimerQuestion" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #d92b04;" styleClass="btn" text="Supprimer" />
+                    </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+                </HBox>
+            </children>
+            <VBox.margin>
+                <Insets top="3.0" />
+            </VBox.margin>
+        </VBox>
+    </children>
+</VBox>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="950.0" spacing="10.0" stylesheets="@../css/AjouterEtudiant.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otmane.app.controlleurs.AjouterEtudiantController">
+    <children>
+      <Pane prefHeight="139.0" prefWidth="1102.0" style="-fx-background-color: linear-gradient(from 0px 200px to 900px  200px,#3f2b96 ,#a8c0ff 100%);">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Label layoutX="50.0" layoutY="30.0" text="Ajouter Etudiant" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="93.0" text="informations - mot de passe" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+        <VBox alignment="TOP_CENTER" prefHeight="267.0" prefWidth="400.0" spacing="20.0">
+            <children>
+            <Label styleClass="title2" stylesheets="@../css/content.css" text="Nom Complet">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="-330.0" />
+               </VBox.margin>
+            </Label>
+                <TextField fx:id="nameField" prefHeight="45.0" prefWidth="400.0" promptText="Nom Complet" styleClass="field" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="250.0" right="250.0" />
+               </VBox.margin></TextField>
+            <Label styleClass="title2" stylesheets="@../css/content.css" text="Mot de passe ">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="-330.0" />
+               </VBox.margin>
+            </Label>
+                <PasswordField fx:id="passwordField" prefHeight="45.0" prefWidth="400.0" promptText="Mot de passe" styleClass="field">
+               <VBox.margin>
+                  <Insets left="250.0" right="250.0" />
+               </VBox.margin></PasswordField>
+                <Label fx:id="lbrErrors" prefHeight="33.0" prefWidth="179.0" />
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="80.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                      <JFXButton onAction="#AjouterEtudiant" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #08d148;" styleClass="btn" text="Ajouter" />
+                  <JFXButton onAction="#SupprimerEtudiant" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #d92b04;" styleClass="btn" text="Supprimer" />
+               </children>
+            </HBox>
+            </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="30.0" />
+    </padding>
+</VBox>

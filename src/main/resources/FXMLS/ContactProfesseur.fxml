@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="620.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.otmane.app.controlleurs.ContactProfesseurController">
+    <children>
+        <VBox fillWidth="false" layoutX="39.0" layoutY="65.0" prefHeight="352.0" prefWidth="514.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="67.0">
+            <children>
+                <Label fx:id="ProfessorNameContact" prefHeight="50.0" styleClass="label-info" text="hello">
+                    <graphic>
+                        <FontAwesomeIconView fill="#189f16" glyphName="USER" layoutX="20.0" size="33" styleClass="font-about" />
+                    </graphic>
+                    <VBox.margin>
+                        <Insets left="10.0" />
+                    </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="350.0">
+               <children>
+                  <JFXButton fx:id="ProfessorMailContact" text="hello">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/gmail.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+                <Label fx:id="ProfessorNumber" prefHeight="50.0" text=" Non autorisé">
+                    <graphic>
+                        <FontAwesomeIconView fill="#0085d9" glyphName="PHONE" layoutX="15.0" size="28" />
+                    </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin>
+                </Label>
+                <Label fx:id="ProfessorMatiereContact" prefHeight="50.0" styleClass="label-info" text="hello">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="BRIEFCASE" size="30" styleClass="font-about" />
+                    </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="94.0" prefWidth="516.0" spacing="10.0" />
+            </children>
+        </VBox>
+        <HBox alignment="BOTTOM_CENTER" layoutX="39.0" layoutY="380.0" prefHeight="42.0" prefWidth="514.0" spacing="5.0">
+         <children>
+            <Label prefHeight="53.0" prefWidth="400.0" style="-fx-background-color: #FFF;" styleClass="header-title" text="Vous pouvez justement cliquer pour Voir Le Profile" textFill="#7b6f6f">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+        </HBox>
+        <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="310.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/men.PNG" />
+            </image>
+        </ImageView>
+        <Label layoutX="211.0" layoutY="7.0" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #FFF;" styleClass="header-title" text="Le Créateur de cette question">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <HBox alignment="CENTER" layoutX="90.0" layoutY="420.0" prefHeight="40.0" prefWidth="400.0">
+         <children>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" onAction="#OpenLinkedin" text="Developed By  " textAlignment="RIGHT">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/linkedin.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

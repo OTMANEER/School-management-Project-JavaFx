@@ -1,0 +1,45 @@
+.parent {
+    -fx-background-color: transparent;
+}
+.btn_login{
+    -fx-background-color: #2196f3;
+    -fx-font-family: OldStandard;
+    -fx-text-fill: #FFF;
+    -fx-font-size: 20px;
+    -fx-background-radius: 15px;
+}
+.btn_login:hover{
+    -fx-cursor:hand;
+    -fx-border-width: 3px;
+    -fx-border-radius: 15px;
+
+    -fx-background-color: #FFF;
+    -fx-font-family: OldStandard;
+    -fx-text-fill: #FFF;
+    -fx-font-weight: bold;
+}
+
+.jfx-snackbar-content {
+    -fx-background-color:#F00;
+    -fx-pref-width: 404px
+}
+.jfx-snackbar-toast {
+    -fx-text-fill: #FFF;
+    -fx-font-size: 22px;
+    -fx-font-family: OldStandard;
+    -fx-text-shadow: 2px
+}
+
+#leftBox{
+    /*-fx-background-color: linear-gradient(from 13px 38px to 52px 52px,#a8c0ff,#3f2b96 100%)*/
+    -fx-background-color: linear-gradient(from 13px 200px to 400px  200px,#a8c0ff,#3f2b96 100%)
+}
+.checkBox_login{
+    -fx-font-size: 20px;
+    -fx-font-family: OldStandard;
+}
+.loginImage:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-rotate: 5;
+}

@@ -1,0 +1,79 @@
+* {
+    -fx-font-family: tahoma arial;
+}
+
+.title {
+    -fx-font-size: 30px;
+    -fx-text-fill:#000000;
+    -fx-effect: dropshadow(gaussian, #e0dc65,8, 1.0, 1, 1);
+
+    /*linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%);*/
+}
+
+.title2 {
+    -fx-font-size:18px;
+    -fx-text-fill: #030926;
+    -fx-font-family: "Roboto Light";
+    -fx-effect: dropshadow(gaussian, #e0dc65,8, 1.0, 1, 1);
+
+   /* linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%);*/
+}
+
+.label_head {
+    -fx-font-size: 18px;
+    -fx-background-color: #EEE;
+    -fx-text-fill: #404040;
+    -fx-font-style: italic;
+    -fx-font-family: Tahoma;
+}
+
+JFXRadioButton {
+    -fx-font-size: 18px;
+    -fx-cursor: hand
+}
+
+.btn {
+    -fx-font-size: 18px;
+    -fx-text-fill: #000000;
+    -fx-pref-width: 140px;
+}
+
+.btn:hover {
+    -fx-cursor: hand;
+}
+.btnBackHomeUnique{
+
+    -fx-cursor: hand;
+    -fx-text-fill:#FFFFFF;
+
+}
+.btnBackHomeUnique:hover {
+    -fx-cursor: hand;
+    -fx-text-alignment: center;
+    -fx-font-size: 18px;
+    -fx-text-fill:#050537;
+    -fx-effect: dropshadow(gaussian, #e0dc65,8, 1.0, 1, 1);
+}
+.btnBackHomeUnique:pressed{
+    -fx-text-fill: #FFFFFF;
+}
+.btn-finished {
+    -fx-font-size:  18px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 50px;
+    -fx-background-color:linear-gradient(from 13px 200px to 400px  200px,#3f2b96 ,#a8c0ff 100%);
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 20
+}
+
+.btn-finished:hover {
+    -fx-background-color:linear-gradient(from 13px 200px to 400px  200px,#3f2b96 ,#a8c0ff 100%);
+
+    -fx-cursor: hand;
+}
+.circle:hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+

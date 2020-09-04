@@ -1,0 +1,23 @@
+Normalement J'ai developé ce projet en utilisant l'editeur #IntelliJ_idea donc je le recommende Pour tester Le code
+
+1- fait attention à la version de Java que vous utilisez ("1.8.0-241") sinon pour La version 11 vous envisagerez
+    un problème  Parce que  Le framework JavaFX n'est pas supporté
+
+2- les bibliothèques dans Ce projet sont ajoutés avec la fonctionnalité MAVEN 
+    Alors attendez L'editeur pour qu'il peut faire les imports etc.
+
+
+3- Faire un REBUILT pour mettre à jour les prerequis.
+
+
+4- Dans files -> Project Structures  : Voir si les Groupes de Maven sont telechargés.Sinon vous devez  cliquer sur l'icon de maven
+
+		actualiser Le (fichier pom.xml).
+
+5- deux Utilisateurs de test:
+		 
+		étudiant: soufiane   password: 0000.
+		Professeru: younes   password: 0000.
+
+6-importer la base de données en utilisant le fichier .sql dans le fichier [MonApp/libs]
+

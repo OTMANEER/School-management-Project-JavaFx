@@ -1,0 +1,19 @@
+.title{
+    -fx-font-size:30px;
+}
+.footer-text{
+    -fx-font-size:12px;
+    -fx-text-fill:#666;
+}
+.field{
+    -fx-font-size:18px;
+}
+.btn{
+    -fx-background-color:#0066ff;
+    -fx-text-fill:#FFF;
+    -fx-background-radius:5px;
+    -fx-font-size:18px;
+}
+.remember-me:hover{
+    -fx-cursor:hand;
+}

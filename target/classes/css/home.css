@@ -1,0 +1,46 @@
+* {
+    -fx-font-family: tahoma arial;
+}
+
+.title {
+    -fx-font-size: 40px;
+    -fx-text-fill:linear-gradient(from 13px 200px to 400px  200px, #404040, #000000 100%)
+}
+.Home_title{
+
+-fx-text-fill:linear-gradient(from 13px 200px to 400px  200px, #404040, #000000 100%);
+    -fx-font-size: 35px;
+    -fx-effect: dropshadow(gaussian, #e0dc65,8, 1.0, 1, 1);
+}
+.min-btn:hover{
+    -fx-background-color: green;
+    -fx-background-radius: 100%;
+}
+
+.btn-choose {
+    -fx-font-size: 22px;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-background-color: linear-gradient(from 13px 200px to 400px  200px,#3f2b96 ,#a8c0ff 100%);
+
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 20
+}
+
+.btn-choose:hover {
+    -fx-background-color:linear-gradient(from 13px 200px to 400px  200px ,#a8c0ff,#3f2b96 100%);
+    -fx-cursor: hand
+}
+
+/* Start SnackBar */
+
+.jfx-snackbar-content {
+    -fx-background-color: #e20e0e;
+    -fx-pref-width: 360px;
+}
+.jfx-snackbar-toast {
+    -fx-text-fill: #FFF;
+    -fx-font-size: 18px;
+    -fx-font-family: Tahoma
+}
+/* End SnackBar */
