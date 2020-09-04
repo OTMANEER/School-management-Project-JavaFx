@@ -51,4 +51,8 @@ in this project i tried to give two seperated interfaces for the same applicatio
   FontAwesome
   JFoenix
   
+  # Editor
+  
+  intellij idea
+  
   
